@@ -20,7 +20,7 @@ class City:
 
 
 def ReadInput():
-    with open("italy.txt", 'r') as f:
+    with open("spain.txt", 'r') as f:
         f.readline()
         for lines in f:
             lines = lines.split()
@@ -128,6 +128,8 @@ if __name__ == '__main__':
     min_dist, shortest = findpath(routes)
     print(f"Najkrotsza trasa: {[c.name for c in shortest]}, dlugosc: {min_dist}")
 
+    n = int(input())
+    m = int(input())
     print(f"Oczekiwane {expectedcomb(n, m)}")
 
     comb = findcomb(selected_cities, m)
