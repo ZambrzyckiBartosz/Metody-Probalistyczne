@@ -108,7 +108,7 @@ def bestpop(route, selectedc):
             bestdiff = abs(current - targetpop)
             bestrut = rut
             best_sum = current
-    return bestrut, best_sum
+    return bestrut, best_sum,targetpop
 
 
 if __name__ == '__main__':
@@ -136,6 +136,6 @@ if __name__ == '__main__':
     for i in range(len(comb)):
         print(f"{i + 1}: {comb[i]}")
 
-    bestsub, subpop= bestpop(comb, selected_cities)
+    bestsub, subpop,avg= bestpop(comb, selected_cities)
     names = [city.name for city in bestsub]
-    print(f"Najlepsza trasa: {names}, pop: {subpop}")
+    print(f"Najlepsza trasa: {names}, populacja najblizsza: {subpop}, polowa populacji: {avg}")
